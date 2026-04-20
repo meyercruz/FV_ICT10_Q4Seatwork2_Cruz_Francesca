@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>Q3 SKILLS TEST</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;  
+      align-items: center;       
+      min-height: 100vh;         
+      background-color: #d4ebfa;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0;               
+      padding: 60px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: black;
+      border-bottom: 3px solid #000000;
+      padding-bottom: 10px;
+    }
+
+    button {
+      padding: 10px;
+      width: 48%;
+      margin-top: 10px;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #b0cde9, #ffc7cb);
+      cursor: pointer;
+    }
+
+     .btn-container {
+        display: flex;          /* makes buttons go side by side */
+        gap: 15px;              /* space between buttons */
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+  <div class="card p-4 w-50">
+    <h1>CREATE ACCOUNT</h1>
+    
+<br>
+
+<!--NAME-->
+<label for="name"><b>NAME:</b></label>
+    <input type="text" placeholder="Enter your name" id="urname" name="name" required>
+
+<br>
+
+<!--SECTION-->
+<label for="sec"><b>SECTION</b></label>
+    <input type="text" placeholder="Enter your section" id="section" name="sec" required>
+
+<br>
+
+<!--FAVORITE SUBJECT-->
+<label for="sub"><b>FAVORITE SUBJECT</b></label>
+    <input type="text" placeholder="Enter your favorite subject" id="subject" name="sub" required>
+
+<div class="btn-container">
+    <button py-click="addClassmate">Add Classmate</button>
+<br>
+    <button py-click="showList">Show List</button>
+</div>
+
+<div id="output"></div>
+    
+<!--CONNECT TO MAIN.PY-->
+<py-config>
+    [[fetch]]
+    files = ["main.py"]
+</py-config>
+
+<script type="py" src="main.py"></script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
